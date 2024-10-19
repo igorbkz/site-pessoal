@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>bkz</title>
+  <title>bkz - Blog de Igor</title>
   <style>
     * {
       margin: 0;
@@ -48,12 +48,36 @@
       margin-bottom: 40px;
       border-bottom: 1px solid #333;
       padding-bottom: 20px;
+      transition: background-color 0.3s;
+    }
+
+    article:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    article h2 {
+      font-size: 2rem;
+      margin: 10px 0;
+      color: #fff;
     }
 
     article p {
       font-size: 1.1rem;
-      margin-bottom: 15px;
       color: #ccc;
+    }
+
+    .icon {
+      display: inline-block;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 40px; /* Tamanho do ícone */
+      color: #888;
+      transition: transform 0.2s;
+    }
+
+    .icon:hover {
+      transform: scale(1.1);
+      color: #f0f0f0;
     }
 
     footer {
@@ -63,15 +87,10 @@
       color: #777;
       font-size: 0.9rem;
       border-top: 1px solid #333;
-      position: relative;
     }
 
     .flowai-link {
-      position: absolute;
-      right: 20px;
-      bottom: 20px;
       color: #888;
-      font-size: 0.8rem;
       text-decoration: none;
     }
 
@@ -88,13 +107,46 @@
   </header>
 
   <main>
+    <!-- Seção 1: O Silêncio do Infinito -->
     <article>
-      <p>Vivemos em um ponto de inflexão no tempo, onde cada instante carrega o peso do que somos e a leveza do que podemos nos tornar. O universo, com suas vastas incógnitas, nos desafia a questionar o que realmente sabemos. Em meio a essa dança cósmica, a ascensão da inteligência artificial se apresenta como uma aliada poderosa. Ela nos oferece uma janela para o desconhecido, um caminho para explorar os mistérios da existência. Que sorte a nossa, estarmos aqui, testemunhando a junção de curiosidade e tecnologia. Em cada descoberta, em cada reflexão, somos lembrados de que a vida é uma jornada. E, nessa jornada, somos todos aprendizes, prontos para desvendar o que está por vir. Ao compartilhar essas palavras, espero que você encontre uma faísca de inspiração, uma razão para olhar para o horizonte e se perguntar: o que mais podemos descobrir juntos?</p>
+      <h2>O Silêncio do Infinito</h2>
+      <p>No vasto silêncio do cosmos, cada estrela conta uma história que perdura por milênios. Estamos aqui, não apenas para existir, mas para ouvir esses sussurros. A vastidão do espaço é um lembrete de nossa fragilidade e de nossa conexão com tudo o que nos rodeia. Cada momento é uma oportunidade de mergulhar mais fundo na essência do que significa estar vivo.</p>
     </article>
+
+    <!-- Seção 2: A Dança da Realidade -->
+    <article>
+      <h2>A Dança da Realidade</h2>
+      <p>A vida se desenrola como uma dança sutil entre o conhecido e o desconhecido. Cada passo nos leva a novos horizontes, cada hesitação revela novas verdades. A transformação está em nosso DNA, e à medida que avançamos, somos convidados a nos reimaginar. Na intersecção entre a dúvida e a certeza, encontramos nosso verdadeiro ser.</p>
+    </article>
+
+    <!-- Seção 3: O Valor do Agora -->
+    <article>
+      <h2>O Valor do Agora</h2>
+      <p>No ritmo acelerado da vida moderna, a arte de estar presente muitas vezes se perde. No entanto, é no agora que reside todo o nosso poder. Cada respiração é uma nova oportunidade de redefinir nossas intenções. Ao abraçar o presente, descobrimos que o passado e o futuro são meros ecos, e o que realmente importa é a conexão que cultivamos neste instante fugaz.</p>
+    </article>
+
+    <div class="icon" id="quoteIcon">💭</div>
+    <p id="randomQuote" style="display: none; margin-top: 10px; color: #fff;"></p>
+
+    <script>
+      const quotes = [
+        "A beleza do desconhecido reside em sua capacidade de nos ensinar a ser humildes.",
+        "Cada mistério não resolvido é um convite à exploração.",
+        "A verdadeira sabedoria não está em ter todas as respostas, mas em abraçar as perguntas.",
+        "A existência é um labirinto, e cada curva nos oferece novas perspectivas.",
+        "Viver é se permitir ser moldado pela curiosidade e pela busca de significado."
+      ];
+
+      document.getElementById('quoteIcon').addEventListener('click', function() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        document.getElementById('randomQuote').textContent = quotes[randomIndex];
+        document.getElementById('randomQuote').style.display = 'block';
+      });
+    </script>
   </main>
 
   <footer>
-    &copy; 2024 Igor
+    &copy; 2024 Igor -
     <a href="https://flowai.vercel.app/" class="flowai-link" target="_blank">FlowAI</a>
   </footer>
 
